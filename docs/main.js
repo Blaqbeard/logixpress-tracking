@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       try {
-        const res = await fetch("http://localhost:5000/api/register", {
+        const res = await fetch("https://logixpress-tracking.onrender.com/api/register", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ name, email, password }),
@@ -432,7 +432,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const rememberMe = document.getElementById("remember-me").checked;
 
       try {
-        const res = await fetch("http://localhost:5000/api/login", {
+        const res = await fetch("https://logixpress-tracking.onrender.com/api/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),
@@ -534,7 +534,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.getElementById("forgot-email").value;
 
       try {
-        const res = await fetch("http://localhost:5000/api/forgot-password", {
+        const res = await fetch("https://logixpress-tracking.onrender.com/api/forgot-password", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email }),
@@ -1019,7 +1019,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trackResult.innerHTML = '<div class="text-gray-400">Searching...</div>';
         const jwt = localStorage.getItem("jwt");
         try {
-          const res = await fetch("http://localhost:5000/api/shipments/track", {
+          const res = await fetch("https://logixpress-tracking.onrender.com/api/shipments/track", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -1239,7 +1239,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     try {
-      const res = await fetch("http://localhost:5000/api/shipments", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/shipments", {
         headers: { Authorization: "Bearer " + jwt },
       });
       if (!res.ok) {
@@ -1313,7 +1313,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     try {
-      const res = await fetch("http://localhost:5000/api/notifications", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/notifications", {
         headers: { Authorization: "Bearer " + jwt },
       });
       if (container && !res.ok) {
@@ -1344,7 +1344,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     try {
-      const res = await fetch("http://localhost:5000/api/analytics", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/analytics", {
         headers: { Authorization: "Bearer " + jwt },
       });
       if (!res.ok) {
@@ -2219,7 +2219,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (typeof arg === "string") {
         // Admin context: fetch from backend
         const jwt = localStorage.getItem("jwt");
-        const res = await fetch("http://localhost:5000/api/shipments/all", {
+        const res = await fetch("https://logixpress-tracking.onrender.com/api/shipments/all", {
           headers: {
             Authorization: "Bearer " + jwt,
             "Content-Type": "application/json",
@@ -2400,7 +2400,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ),
       };
 
-      const res = await fetch("http://localhost:5000/api/shipments", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/shipments", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -2502,7 +2502,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trackResult.innerHTML = '<div class="text-gray-400">Searching...</div>';
         const jwt = localStorage.getItem("jwt");
         try {
-          const res = await fetch("http://localhost:5000/api/shipments/track", {
+          const res = await fetch("https://logixpress-tracking.onrender.com/api/shipments/track", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -2598,7 +2598,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const jwt = localStorage.getItem("jwt");
 
         try {
-          const res = await fetch("http://localhost:5000/api/support", {
+          const res = await fetch("https://logixpress-tracking.onrender.com/api/support", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -2770,7 +2770,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const jwt = localStorage.getItem("jwt");
 
         try {
-          const res = await fetch("http://localhost:5000/api/user/profile", {
+          const res = await fetch("https://logixpress-tracking.onrender.com/api/user/profile", {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
@@ -2798,7 +2798,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const jwt = localStorage.getItem("jwt");
 
         try {
-          const res = await fetch("http://localhost:5000/api/user/contact", {
+          const res = await fetch("https://logixpress-tracking.onrender.com/api/user/contact", {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
@@ -2834,7 +2834,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
           const res = await fetch(
-            "http://localhost:5000/api/user/notifications",
+            "https://logixpress-tracking.onrender.com/api/user/notifications",
             {
               method: "PUT",
               headers: {
@@ -2876,7 +2876,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const jwt = localStorage.getItem("jwt");
 
         try {
-          const res = await fetch("http://localhost:5000/api/user/shipping", {
+          const res = await fetch("https://logixpress-tracking.onrender.com/api/user/shipping", {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
@@ -2912,7 +2912,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const jwt = localStorage.getItem("jwt");
 
         try {
-          const res = await fetch("http://localhost:5000/api/user/password", {
+          const res = await fetch("https://logixpress-tracking.onrender.com/api/user/password", {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
@@ -2943,7 +2943,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const jwt = localStorage.getItem("jwt");
 
           try {
-            const res = await fetch("http://localhost:5000/api/user/delete", {
+            const res = await fetch("https://logixpress-tracking.onrender.com/api/user/delete", {
               method: "DELETE",
               headers: {
                 Authorization: "Bearer " + jwt,
@@ -3425,7 +3425,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     try {
-      const res = await fetch("http://localhost:5000/api/shipments/all", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/shipments/all", {
         headers: { Authorization: "Bearer " + jwt },
       });
       if (!res.ok) {
@@ -3678,7 +3678,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     try {
-      const res = await fetch("http://localhost:5000/api/notifications/all", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/notifications/all", {
         headers: { Authorization: "Bearer " + jwt },
       });
       if (!res.ok) {
@@ -3905,7 +3905,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const jwt = localStorage.getItem("jwt");
       try {
         const res = await fetch(
-          `http://localhost:5000/api/shipments/${trackingNumber}/status`,
+          `https://logixpress-tracking.onrender.com/api/shipments/${trackingNumber}/status`,
           {
             method: "PUT",
             headers: {
@@ -4098,7 +4098,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     try {
-      const res = await fetch("http://localhost:5000/api/analytics", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/analytics", {
         headers: { Authorization: "Bearer " + jwt },
       });
       if (!res.ok) {
@@ -4135,7 +4135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const res = await fetch(
-        "http://localhost:5000/api/analytics/comprehensive",
+        "https://logixpress-tracking.onrender.com/api/analytics/comprehensive",
         {
           headers: { Authorization: "Bearer " + jwt },
         }
@@ -4718,7 +4718,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     try {
-      const res = await fetch("http://localhost:5000/api/notifications/all", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/notifications/all", {
         headers: { Authorization: "Bearer " + jwt },
       });
       if (!res.ok) {
@@ -4747,7 +4747,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const jwt = localStorage.getItem("jwt");
       if (!jwt) return;
       try {
-        const res = await fetch("http://localhost:5000/api/shipments/all", {
+        const res = await fetch("https://logixpress-tracking.onrender.com/api/shipments/all", {
           headers: { Authorization: "Bearer " + jwt },
         });
         if (!res.ok) return;
@@ -4915,7 +4915,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const role = document.getElementById("add-user-role").value;
         const jwt = localStorage.getItem("jwt");
         try {
-          const res = await fetch("http://localhost:5000/api/users", {
+          const res = await fetch("https://logixpress-tracking.onrender.com/api/users", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -5049,7 +5049,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const jwt = localStorage.getItem("jwt");
         try {
           const res = await fetch(
-            `http://localhost:5000/api/users/${user._id}`,
+            `https://logixpress-tracking.onrender.com/api/users/${user._id}`,
             {
               method: "PUT",
               headers: {
@@ -5197,7 +5197,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     try {
-      const res = await fetch("http://localhost:5000/api/users", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/users", {
         headers: { Authorization: "Bearer " + jwt },
       });
       if (!res.ok) {
@@ -5236,7 +5236,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.querySelector("#delete-user-confirm").onclick = () => {
       modal.remove();
       const jwt = localStorage.getItem("jwt");
-      fetch(`http://localhost:5000/api/users/${user._id}`, {
+      fetch(`https://logixpress-tracking.onrender.com/api/users/${user._id}`, {
         method: "DELETE",
         headers: { Authorization: "Bearer " + jwt },
       })
@@ -5272,7 +5272,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.body.appendChild(modal);
     const jwt = localStorage.getItem("jwt");
-    fetch(`http://localhost:5000/api/users/${user._id}/activity`, {
+    fetch(`https://logixpress-tracking.onrender.com/api/users/${user._id}/activity`, {
       headers: { Authorization: "Bearer " + jwt },
     })
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
@@ -6830,7 +6830,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const jwt = localStorage.getItem("jwt");
     if (!jwt) return [];
     try {
-      const res = await fetch("http://localhost:5000/api/users", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/users", {
         headers: { Authorization: "Bearer " + jwt },
       });
       if (!res.ok) return [];
@@ -6844,7 +6844,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const jwt = localStorage.getItem("jwt");
     if (!jwt) return [];
     try {
-      const res = await fetch("http://localhost:5000/api/logs", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/logs", {
         headers: { Authorization: "Bearer " + jwt },
       });
       if (!res.ok) return [];
@@ -6858,7 +6858,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const jwt = localStorage.getItem("jwt");
     if (!jwt) return [];
     try {
-      const res = await fetch("http://localhost:5000/api/shipments/all", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/shipments/all", {
         headers: { Authorization: "Bearer " + jwt },
       });
       if (!res.ok) return [];
@@ -7192,7 +7192,7 @@ document.addEventListener("DOMContentLoaded", () => {
             async (data, modal) => {
               try {
                 const jwt = localStorage.getItem("jwt");
-                const res = await fetch("http://localhost:5000/api/zones", {
+                const res = await fetch("https://logixpress-tracking.onrender.com/api/zones", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
@@ -7238,7 +7238,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ],
             async (data, modal) => {
               try {
-                const res = await fetch("http://localhost:5000/api/register", {
+                const res = await fetch("https://logixpress-tracking.onrender.com/api/register", {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },
                   body: JSON.stringify({
@@ -7280,7 +7280,7 @@ document.addEventListener("DOMContentLoaded", () => {
               try {
                 const jwt = localStorage.getItem("jwt");
                 const res = await fetch(
-                  `http://localhost:5000/api/users/${userId}/suspend`,
+                  `https://logixpress-tracking.onrender.com/api/users/${userId}/suspend`,
                   {
                     method: "PUT",
                     headers: {
@@ -7512,7 +7512,7 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
               const jwt = localStorage.getItem("jwt");
               const res = await fetch(
-                `http://localhost:5000/api/users/${user._id}/role`,
+                `https://logixpress-tracking.onrender.com/api/users/${user._id}/role`,
                 {
                   method: "PUT",
                   headers: {
@@ -7552,7 +7552,7 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
               const jwt = localStorage.getItem("jwt");
               const res = await fetch(
-                `http://localhost:5000/api/users/${userId}/suspend`,
+                `https://logixpress-tracking.onrender.com/api/users/${userId}/suspend`,
                 {
                   method: "PUT",
                   headers: {
@@ -7811,7 +7811,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/drivers", {
+      const res = await fetch("https://logixpress-tracking.onrender.com/api/drivers", {
         headers: { Authorization: "Bearer " + jwt },
       });
 
@@ -8007,7 +8007,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const jwt = localStorage.getItem("jwt");
         try {
-          const res = await fetch("http://localhost:5000/api/drivers", {
+          const res = await fetch("https://logixpress-tracking.onrender.com/api/drivers", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -8117,7 +8117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const jwt = localStorage.getItem("jwt");
         try {
           const res = await fetch(
-            `http://localhost:5000/api/drivers/${driver._id}`,
+            `https://logixpress-tracking.onrender.com/api/drivers/${driver._id}`,
             {
               method: "PUT",
               headers: {
@@ -8166,7 +8166,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.querySelector("#delete-driver-confirm").onclick = () => {
       modal.remove();
       const jwt = localStorage.getItem("jwt");
-      fetch(`http://localhost:5000/api/drivers/${driver._id}`, {
+      fetch(`https://logixpress-tracking.onrender.com/api/drivers/${driver._id}`, {
         method: "DELETE",
         headers: { Authorization: "Bearer " + jwt },
       })
@@ -8225,7 +8225,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const jwt = localStorage.getItem("jwt");
         try {
           const res = await fetch(
-            `http://localhost:5000/api/drivers/${driver._id}/status`,
+            `https://logixpress-tracking.onrender.com/api/drivers/${driver._id}/status`,
             {
               method: "PUT",
               headers: {
@@ -8265,7 +8265,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(modal);
 
     const jwt = localStorage.getItem("jwt");
-    fetch(`http://localhost:5000/api/drivers/${driver._id}/assignments`, {
+    fetch(`https://logixpress-tracking.onrender.com/api/drivers/${driver._id}/assignments`, {
       headers: { Authorization: "Bearer " + jwt },
     })
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
@@ -8342,7 +8342,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(modal);
 
     const jwt = localStorage.getItem("jwt");
-    fetch("http://localhost:5000/api/drivers", {
+    fetch("https://logixpress-tracking.onrender.com/api/drivers", {
       headers: { Authorization: "Bearer " + jwt },
     })
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
@@ -8439,7 +8439,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     confirmModal.querySelector("#confirm-assignment").onclick = () => {
       const jwt = localStorage.getItem("jwt");
-      fetch(`http://localhost:5000/api/drivers/${driverId}/assign`, {
+      fetch(`https://logixpress-tracking.onrender.com/api/drivers/${driverId}/assign`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       try {
         const res = await fetch(
-          `http://localhost:5000/api/shipments/track/${trackingNumber}`
+          `https://logixpress-tracking.onrender.com/api/shipments/track/${trackingNumber}`
         );
         if (!res.ok) throw new Error();
         const data = await res.json();
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         message: form.querySelector("textarea")?.value,
       };
       try {
-        await fetch("http://localhost:5000/api/contact", {
+        await fetch("https://logixpress-tracking.onrender.com/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
@@ -140,7 +140,7 @@ function showTrackingModal() {
           }
           try {
             const res = await fetch(
-              `http://localhost:5000/api/shipments/track/${trackingNumber}`
+              `https://logixpress-tracking.onrender.com/api/shipments/track/${trackingNumber}`
             );
             if (!res.ok) throw new Error();
             const data = await res.json();
@@ -205,7 +205,9 @@ function showDemoModal() {
         // Fetch real demo data (simulate with a real endpoint or fallback)
         let demoData;
         try {
-          const res = await fetch("http://localhost:5000/api/shipments/demo");
+          const res = await fetch(
+            "https://logixpress-tracking.onrender.com/api/shipments/demo"
+          );
           if (!res.ok) throw new Error();
           demoData = await res.json();
         } catch {

@@ -1,26 +1,27 @@
-# LogiXpress - Logistics Tracking Concept
+# LogiXpress - Logistics Tracking Platform
 
-A concept logistics platform demonstrating real-time tracking features and interactive map visualization.
+A logistics platform for real-time shipment tracking, notifications, analytics, and driver management.
 
 ## Features
 
-- Interactive map visualization concept
-- Real-time package tracking concept
-- Responsive dashboard
-- User authentication concept
-- Delivery status updates concept
-- Route optimization concept
+- Real-time package tracking
+- User authentication
+- Delivery status updates
+- Notifications (email/SMS via Twilio)
+- Analytics dashboard
+- Driver and shipment management
+- Responsive frontend UI
 
 ## Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript
-- PHP
-- MySQL
-- Google Maps API
+- Node.js (Express) backend
+- MongoDB (via Mongoose)
+- Twilio (notifications)
+- HTML5, CSS3, JavaScript (frontend)
+- Deployed backend: [Render](https://logixpress-tracking.onrender.com)
+- Deployed frontend: [GitHub Pages](https://blaqbeard.github.io/logixpress-tracking)
 
-## Installation
+## Installation (Development)
 
 1. Clone the repository
 
@@ -28,64 +29,65 @@ A concept logistics platform demonstrating real-time tracking features and inter
 git clone https://github.com/Blaqbeard/logixpress-tracking.git
 ```
 
-2. Install dependencies
+2. Install backend dependencies
 
 ```bash
+cd backend
 npm install
 ```
 
-3. Set up the database
+3. Create a `.env` file in the `backend/` directory with the following variables:
 
-```bash
-php artisan migrate
+```
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+TWILIO_ACCOUNT_SID=your_twilio_account_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+TWILIO_PHONE_NUMBER=your_twilio_phone_number
 ```
 
-4. Configure Google Maps API
-
-- Get your API key from Google Cloud Console
-- Add it to your .env file
-
-5. Start the development server
+4. Start the backend server
 
 ```bash
-npm run dev
+npm start
 ```
+
+5. Open the frontend
+
+- The frontend is in the `docs/` directory. Open `docs/index.html` in your browser for local testing.
+
+## Deployment
+
+### Backend (Render)
+
+- The backend is deployed on Render: [https://logixpress-tracking.onrender.com](https://logixpress-tracking.onrender.com)
+- Ensure your environment variables are set in the Render dashboard.
+- CORS is configured to allow requests from the GitHub Pages frontend.
+
+### Frontend (GitHub Pages)
+
+- The frontend is deployed at: [https://blaqbeard.github.io/logixpress-tracking](https://blaqbeard.github.io/logixpress-tracking)
+- All API calls in the frontend use the Render backend URL.
 
 ## Project Structure
 
 ```
-logixpress-tracking/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── styles/
-├── public/
-│   ├── images/
-│   └── assets/
-└── database/
-    └── migrations/
+Project 1-LogiXpress/
+├── backend/
+│   ├── app.js
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   ├── package.json
+│   └── ...
+├── docs/           # Frontend (static site)
+│   ├── index.html
+│   ├── main.js
+│   ├── ...
+├── images/
+├── README.md
+└── ...
 ```
-
-## Design Concept
-
-This project demonstrates:
-
-- Modern UI/UX design principles
-- Responsive layout techniques
-- Interactive user interface elements
-- Logistics tracking best practices
-
-## Screenshots
-
-[Add screenshots of your project here]
-
-## Note
-
-This is a concept project created to showcase design and development skills. It is not intended for production use.
-
-## Live Demo
-
-[Add your live demo link here]
 
 ## Contributing
 

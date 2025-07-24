@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@theme {
+  --text-custom-size: 12px;
+  --text-custom2-size: 20px;
+}
+
+/* Hide scrollbar utility for admin shipment table */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

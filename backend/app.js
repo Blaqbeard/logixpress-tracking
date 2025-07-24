@@ -12,7 +12,12 @@ const driversRoutes = require("./routes/drivers");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// Replace the default CORS setup with a more secure one
+const corsOptions = {
+  origin: "https://blaqbeard.github.io/logixpress-tracking",
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // MongoDB connection

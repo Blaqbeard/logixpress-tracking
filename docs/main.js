@@ -735,7 +735,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "hidden md:flex flex-1 justify-between items-center text-gray-700 font-medium";
     userNav.innerHTML = `
      <div class="flex flex-row gap-2 md:gap-4 items-center w-full overflow-x-auto whitespace-wrap no-scrollbar">
-        <img src="images/logixpresss.png" alt="LogiXpress Logo" class="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16" />
         ${navLinks}
      </div>
       <div class="ml-4 flex items-center relative">
